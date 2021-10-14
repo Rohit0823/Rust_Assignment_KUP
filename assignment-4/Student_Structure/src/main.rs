@@ -1,3 +1,4 @@
+/// Student structure
 struct Student {
     name:String,
     roll_no:i32,
@@ -5,8 +6,15 @@ struct Student {
     department:String,
     school:String,
 }
-
-
+/// This method initializes Student
+///
+/// #Arguments
+///
+/// Student Structure
+///
+/// #Return
+///
+/// Return the Student type
 fn new(){
     let student =Student {
         name:String::from("Rohitverma"),
@@ -15,22 +23,37 @@ fn new(){
         department:String::from("ComputerScience"),
         school:String::from("inderprasthaengineeringcollege"),
     };
-
-
 }
+/// Score structure
 struct Score {
     hindi:f32,
     english:f32,
     maths:f32,
     science:f32,
 }
-
+/// This method find the average of score.
+///
+/// #Arguments
+///
+/// get_avg type object
+///
+/// #Return
+///
+/// Returns avg of marks.
 
 fn get_avg(avg: &Score) -> f32{
     let avg: f32 = (avg.hindi + avg.english + avg.maths + avg.science) / 4.0;
     avg
 }
-
+/// This method compare the marks equal to 35 or not.
+///
+/// #Arguments
+///
+/// pass_student type object
+///
+/// #Return
+///
+/// Returns value
 fn pass_student(marks: &Score) -> [f32; 4]{
     let mut arr: [f32; 4] = [marks.hindi, marks.english, marks.maths, marks.science];
 
@@ -56,9 +79,15 @@ fn pass_student(marks: &Score) -> [f32; 4]{
     }
     return arr;
 }
-
-
-
+/// This main method print the details, marks and avg.
+///
+/// #Arguments
+///
+/// Compare student_record.
+///
+/// #Return
+///
+/// Returns print marks and avg successfully.
 fn main() {
     let mut studentscore = Score{
         hindi: 32.0,
@@ -66,8 +95,6 @@ fn main() {
         maths: 49.0,
         science: 56.0,
     };
-
-
     let arr1 = [studentscore.hindi, studentscore.english, studentscore.maths, studentscore.science];
     println!("score {:?}", arr1);
 
@@ -82,6 +109,5 @@ fn main() {
         maths: array1[2],
         science: array1[3],
     };
-
     println!("New Avg {}", get_avg(&studentscore));
 }

@@ -2,7 +2,7 @@ struct Complex {
     real: f64,
     imaginary: f64,
 }
-/// fn main method print the complex numbers.
+/// main method print the complex numbers.
 ///
 /// #Arguments
 ///

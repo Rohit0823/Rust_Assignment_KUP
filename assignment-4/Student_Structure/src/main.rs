@@ -6,7 +6,7 @@ struct Student {
     department:String,
     school:String,
 }
-/// This method initializes Student
+/// new method initializes Student
 ///
 /// #Arguments
 ///
@@ -31,7 +31,7 @@ struct Score {
     maths:f32,
     science:f32,
 }
-/// This method find the average of score.
+/// get_avg method find the average of score.
 ///
 /// #Arguments
 ///
@@ -45,7 +45,7 @@ fn get_avg(avg: &Score) -> f32{
     let avg: f32 = (avg.hindi + avg.english + avg.maths + avg.science) / 4.0;
     avg
 }
-/// This method compare the marks equal to 35 or not.
+/// pass_student method compare the marks equal to 35 or not.
 ///
 /// #Arguments
 ///
@@ -79,7 +79,7 @@ fn pass_student(marks: &Score) -> [f32; 4]{
     }
     return arr;
 }
-/// This main method print the details, marks and avg.
+///  main method print the details, marks and avg.
 ///
 /// #Arguments
 ///

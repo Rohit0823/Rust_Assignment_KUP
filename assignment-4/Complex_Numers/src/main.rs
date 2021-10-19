@@ -1,24 +1,48 @@
-struct Complex {
-    real: f64,
-    imaginary: f64,
+/// Numbers Structure
+struct Numbers {
+    num_first: u32,
+    num_second: u32,
 }
-/// main method print the complex numbers.
+/// This main method print the complex numbers.
 ///
 /// #Arguments
 ///
-/// complex of the two Number.
+/// complex of the Structure Number.
 ///
 /// #Return
 ///
 /// Returns successfully print all.
 fn main() {
-    let real = num::complex::Complex::new(5.0, 10.0);
-    let imaginary = num::complex::Complex::new(3.1, -1.2);
-    let sum = real + imaginary;
-    let subtract = real - imaginary;
-    let multiply = real * imaginary;
-
-    println!("Sum: {}", sum);
-    println!("Subtract: {}", subtract);
-    println!("multiply: {}", multiply);
+    let sum = Numbers {
+        num_first: 100,
+        num_second: 50.0 as u32,
+    };
+    println!("Addition of two numbers is {:?}+i ", sum.addition());
+    println!("Subtraction of two numbers is: {:?}+i ", sum.subtract());
+    println!("Multiplication of two numbers is: {:?}+i ", sum.multiplication());
+    println!("Divisionn of two numbers is: {:?}+i ", sum.division());
+}
+/// This method calculate the two complex numbers.
+///
+/// #Arguments
+///
+/// complex of the Structure Number.
+///
+/// #Return
+///
+/// Returns result of two number.
+impl Numbers {
+     println!("First number and Second number is : {:?}, {:?}i", self.num_first, self.num_second);
+    fn addition(&self) -> u32 {
+        self.num_first + self.num_second
+    }
+    fn subtract(&self) -> u32 {
+        self.num_first - self.num_second
+    }
+    fn multiplication(&self) -> u32 {
+        self.num_first * self.num_second
+    }
+    fn division(&self) -> u32 {
+        self.num_first / self.num_second
+    }
 }
